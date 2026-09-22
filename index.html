@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Kimpool متخصصة في بيع طاولات البلياردو، الصيانة، إعادة التلبيد، الكراء والإكسسوارات في المغرب.">
+<meta name="theme-color" content="#0f766e">
+<title>Kimpool | طاولات بلياردو وصيانة وكراء في المغرب</title>
+
+<style>
+:root{--teal:#0f766e;--teal2:#14b8a6;--ink:#07110f;--dark:#0a1211;--muted:#66736f;--line:#e4ebe8;--bg:#f7faf9;--white:#fff;--shadow:0 18px 50px rgba(7,17,15,.1);--radius:22px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.75}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:25px;font-weight:900;letter-spacing:2px}
+.logo span{color:var(--teal)}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700}
+.navlinks a:hover{color:var(--teal)}
+.navcta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 18px;font-weight:800;border:1px solid transparent;cursor:pointer}
+.navcta,.btn-primary{background:var(--teal);color:#fff}
+.navcta:hover,.btn-primary:hover{background:#0b5f59}
+.btn-outline{border-color:#cdd9d5;background:#fff}
+.menu{display:none;background:none;border:0;font-size:26px}
+
+.hero{background:radial-gradient(circle at 15% 15%,rgba(20,184,166,.22),transparent 34%),linear-gradient(135deg,#06110f,#0b211d 55%,#123c35);color:#fff;padding:90px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.eyebrow{color:#6ee7d8;font-weight:800;letter-spacing:.5px}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.08;margin:15px 0 22px}
+.hero p{font-size:19px;color:#d4e3df;max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero .btn-outline{background:transparent;color:#fff;border-color:#55736d}
+
+.hero-card{min-height:430px;border-radius:30px;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.16);box-shadow:0 25px 80px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;padding:20px;position:relative;overflow:hidden}
+.table-art{width:82%;aspect-ratio:1.65;border-radius:12px;background:#0d766c;box-shadow:0 20px 40px #0008;position:relative;border:12px solid #402b1d}
+.table-art:before{content:"";position:absolute;inset:8%;border:2px solid #b9fff2;border-radius:6px}
+.table-art i{position:absolute;width:24px;height:24px;background:#06110f;border-radius:50%;box-shadow:0 0 0 5px #2a1b13}
+.p1{top:3%;right:3%}.p2{top:3%;left:3%}.p3{bottom:3%;right:3%}.p4{bottom:3%;left:3%}
+.p5{top:50%;right:-3%;transform:translateY(-50%)}.p6{top:50%;left:-3%;transform:translateY(-50%)}
+
+.trust{padding:22px 0;border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center}
+.trust strong{display:block;font-size:14px}
+
+section{padding:85px 0}
+.section-head{max-width:700px;margin-bottom:38px}
+.section-head.center{margin-inline:auto;text-align:center}
+.section-head h2{font-size:clamp(30px,4vw,44px);line-height:1.15;margin:8px 0 12px}
+.section-head p{color:var(--muted);margin:0}
+
+.services{background:var(--bg)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:0 10px 35px rgba(7,17,15,.05);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.icon{width:48px;height:48px;border-radius:14px;background:#e5f7f4;color:var(--teal);display:grid;place-items:center;font-weight:900;font-size:20px}
+.card h3{margin:18px 0 8px}
+.card p{color:var(--muted);font-size:14px}
+.text-link{color:var(--teal);font-weight:900;font-size:14px}
+
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.visual{min-height:390px;border-radius:28px;background:linear-gradient(145deg,#102e28,#0a1412);display:grid;place-items:center;overflow:hidden}
+.visual .table-art{width:75%}
+.checklist{display:grid;gap:13px;margin:25px 0}
+.check{display:flex;gap:10px;align-items:flex-start}
+.check b{color:var(--teal)}
+
+.b2b{background:#07110f;color:#fff}
+.b2b .section-head p{color:#b9cbc6}
+.b2b-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.b2b-box{border:1px solid #28413c;border-radius:25px;padding:30px;background:linear-gradient(145deg,#0b211d,#0a1412)}
+
+.cities{background:var(--bg)}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{padding:9px 15px;background:#fff;border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:700}
+
+.gallery{display:grid;grid-template-columns:1.4fr .8fr .8fr;grid-auto-rows:190px;gap:12px}
+.gallery div{border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#0b211d,#1b5c50);position:relative}
+.gallery div:first-child{grid-row:span 2}
+.gallery div:after{content:"BILLIARD • KIMPOOL";position:absolute;bottom:12px;right:14px;color:#fff;font-size:12px;font-weight:800;letter-spacing:1px}
+.g1:before{content:"";position:absolute;width:70%;aspect-ratio:1.65;background:#0e8175;border:10px solid #3c281b;border-radius:10px;top:28%;left:15%;box-shadow:0 15px 30px #0008}
+.g2:before,.g3:before,.g4:before,.g5:before{content:"";position:absolute;width:55%;aspect-ratio:1.6;background:#159b8d;border:7px solid #402b1d;border-radius:8px;top:30%;left:23%}
+
+.contact{background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px}
+.contact-box{background:#07110f;color:#fff;border-radius:25px;padding:30px}
+.contact-box p{color:#c4d4d0}
+.form{background:#fff;border:1px solid var(--line);border-radius:25px;padding:30px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:grid;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-weight:800;font-size:13px}
+.field input,.field select,.field textarea{width:100%;padding:13px;border:1px solid #d7e1de;border-radius:11px;font:inherit;outline:none}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px #0f766e18}
+
+.final{padding:65px 0;background:linear-gradient(135deg,#0f766e,#083d37);color:#fff;text-align:center}
+.final h2{font-size:40px;margin:0 0 8px}
+.final p{color:#d4eeea}
+.final .btn{background:#fff;color:#075c55}
+
+footer{background:#050b0a;color:#d4dfdc;padding:45px 0 25px}
+.foot{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}
+.foot small{color:#82928d}
+.footer-links{display:flex;flex-wrap:wrap;gap:16px;font-size:13px}
+.float-wa{position:fixed;bottom:20px;left:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#16a34a;color:#fff;display:grid;place-items:center;font-size:27px;font-weight:900;box-shadow:0 12px 30px #0003}
+
+@media(max-width:900px){
+.navlinks{display:none}
+.menu{display:block}
+.navlinks.open{display:flex;position:absolute;top:74px;right:0;left:0;background:#fff;padding:18px 4%;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}
+.navlinks.open .navcta{text-align:center}
+.hero-grid,.feature,.b2b-grid,.contact-grid{grid-template-columns:1fr}
+.hero{padding-top:55px}
+.hero-card{min-height:300px}
+.cards{grid-template-columns:1fr 1fr}
+.trust-grid{grid-template-columns:1fr 1fr}
+.gallery{grid-template-columns:1fr 1fr}
+.gallery div:first-child{grid-row:auto;grid-column:span 2}
+}
+
+@media(max-width:560px){
+nav{height:66px}
+.logo{font-size:22px}
+.navlinks.open{top:66px}
+.hero h1{font-size:39px}
+.hero p{font-size:16px}
+.hero-card{min-height:240px}
+.cards,.trust-grid,.form-grid{grid-template-columns:1fr}
+.section-head h2{font-size:31px}
+section{padding:65px 0}
+.gallery{grid-template-columns:1fr;grid-auto-rows:170px}
+.gallery div:first-child{grid-column:auto}
+.foot{flex-direction:column}
+.float-wa{left:15px;bottom:15px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<a class="logo" href="#home">KIM<span>POOL</span></a>
+<button class="menu" aria-label="فتح القائمة" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+<div class="navlinks">
+<a href="#home">الرئيسية</a>
+<a href="#services">الخدمات</a>
+<a href="#tables">الطاولات</a>
+<a href="#maintenance">الصيانة</a>
+<a href="#b2b">للمهنيين</a>
+<a href="#contact">تواصل معنا</a>
+<a class="navcta" href="#" onclick="openWhatsApp('السلام عليكم، أريد طلب عرض سعر من Kimpool.')">اطلب عرض سعر</a>
+</div>
+</nav>
+</div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">BILLARD • MAROC</div>
+<h1>كل ما تحتاجه للبلياردو في المغرب</h1>
+<p>بيع، صيانة، إعادة تلبيد، كراء وإكسسوارات البلياردو — بخدمة احترافية من ورززات إلى جميع المدن المغربية.</p>
+<div class="actions">
+<a class="btn btn-primary" href="#" onclick="openWhatsApp('السلام عليكم، أريد طلب عرض سعر من Kimpool.')">اطلب عرض سعر عبر واتساب</a>
+<a class="btn btn-outline" href="#services">اكتشف خدماتنا</a>
+</div>
+</div>
+
+<div class="hero-card">
+<div class="table-art">
+<i class="p1"></i><i class="p2"></i><i class="p3"></i><i class="p4"></i><i class="p5"></i><i class="p6"></i>
+</div>
+</div>
+</div>
+</section>
+
+<div class="trust">
+<div class="container trust-grid">
+<div>✓<strong>طاولات عالية الجودة</strong></div>
+<div>✓<strong>خدمة احترافية</strong></div>
+<div>✓<strong>جميع المدن المغربية</strong></div>
+<div>✓<strong>حلول متكاملة</strong></div>
+</div>
+</div>
+
+<section class="services" id="services">
+<div class="container">
+<div class="section-head center">
+<div class="eyebrow">NOS SERVICES</div>
+<h2>حلول البلياردو في مكان واحد</h2>
+<p>من شراء طاولة جديدة إلى الصيانة والكراء والإكسسوارات، Kimpool توفر حلولاً متكاملة للأفراد والمهنيين.</p>
+</div>
+
+<div class="cards">
+
+<article class="card">
+<div class="icon">01</div>
+<h3>بيع الطاولات</h3>
+<p>طاولات بلياردو عالية الجودة للمنزل والمشاريع التجارية.</p>
+<a class="text-link" href="#contact">اطلب عرض سعر ←</a>
+</article>
+
+<article class="card">
+<div class="icon">02</div>
+<h3>الصيانة وإعادة التلبيد</h3>
+<p>صيانة وإصلاح وتغيير قماش الطاولات للحفاظ على جودة اللعب.</p>
+<a class="text-link" href="#contact">اطلب الخدمة ←</a>
+</article>
+
+<article class="card">
+<div class="icon">03</div>
+<h3>الكراء</h3>
+<p>كراء طاولات البلياردو للمناسبات والفعاليات والمشاريع التجارية.</p>
+<a class="text-link" href="#contact">استفسر عن الكراء ←</a>
+</article>
+
+<article class="card">
+<div class="icon">04</div>
+<h3>الإكسسوارات</h3>
+<p>مستلزمات وإكسسوارات البلياردو لتجهيز طاولتك بشكل كامل.</p>
+<a class="text-link" href="#contact">استفسر عن الإكسسوارات ←</a>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="tables">
+<div class="container feature">
+<div class="visual">
+<div class="table-art">
+<i class="p1"></i><i class="p2"></i><i class="p3"></i><i class="p4"></i><i class="p5"></i><i class="p6"></i>
+</div>
+</div>
+
+<div>
+<div class="eyebrow">TABLES DE BILLARD</div>
+<h2>طاولات بلياردو تناسب احتياجاتك</h2>
+<p>سواء لمنزلك أو لمقهى أو فندق أو قاعة ألعاب، تواصل معنا لمعرفة الخيارات والمواصفات المتاحة.</p>
+
+<div class="checklist">
+<div class="check"><b>✓</b><span>خيارات للاستخدام الشخصي والتجاري</span></div>
+<div class="check"><b>✓</b><span>حلول تناسب مختلف المشاريع</span></div>
+<div class="check"><b>✓</b><span>طلب السعر والمواصفات مباشرة</span></div>
+</div>
+
+<a class="btn btn-primary" href="#contact">احصل على عرض سعر</a>
+</div>
+</div>
+</section>
+
+<section id="maintenance" class="services">
+<div class="container feature">
+
+<div>
+<div class="eyebrow">ENTRETIEN & RÉPARATION</div>
+<h2>حافظ على جودة طاولتك</h2>
+<p>العناية الجيدة بالطاولة تساعد على الحفاظ على تجربة لعب مستقرة ومظهر احترافي.</p>
+
+<div class="checklist">
+<div class="check"><b>✓</b><span>صيانة وإصلاح</span></div>
+<div class="check"><b>✓</b><span>تغيير القماش وإعادة التلبيد</span></div>
+<div class="check"><b>✓</b><span>ضبط واستواء الطاولة</span></div>
+</div>
+
+<a class="btn btn-primary" href="#contact">اطلب صيانة طاولتك</a>
+</div>
+
+<div class="visual">
+<div style="color:#d9fffa;text-align:center">
+<div style="font-size:72px">♠</div>
+<strong style="font-size:24px">Crafted for the game</strong>
+<p style="color:#a9c8c2">KIMPOOL</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="b2b" id="b2b">
+<div class="container b2b-grid">
+
+<div class="section-head">
+<div class="eyebrow">B2B • PROFESSIONNELS</div>
+<h2>حلول خاصة للمقاهي والفنادق وقاعات الألعاب</h2>
+<p>تجهز مشروعاً جديداً أو تريد إضافة طاولات بلياردو إلى مشروعك؟ Kimpool توفر حلولاً مخصصة للمهنيين، من الطاولات إلى الصيانة والكراء والإكسسوارات.</p>
+
+<div class="actions">
+<a class="btn btn-primary" href="#contact">اطلب عرضاً لمشروعك</a>
+</div>
+</div>
+
+<div class="b2b-box">
+<h3>عروض خاصة للمشاريع والطلبات بالجملة</h3>
+<p>أرسل لنا تفاصيل المشروع والمدينة والخدمات التي تحتاجها، وسنتعرف على طلبك.</p>
+
+<div class="checklist">
+<div class="check"><b>✓</b><span>المقاهي</span></div>
+<div class="check"><b>✓</b><span>الفنادق وLounge</span></div>
+<div class="check"><b>✓</b><span>قاعات الألعاب</span></div>
+<div class="check"><b>✓</b><span>المشاريع والطلبات بالجملة</span></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head center">
+<div class="eyebrow">POURQUOI KIMPOOL</div>
+<h2>لماذا Kimpool؟</h2>
+</div>
+
+<div class="cards">
+
+<article class="card">
+<div class="icon">✓</div>
+<h3>جودة</h3>
+<p>منتجات وخدمات تهتم بالتفاصيل.</p>
+</article>
+
+<article class="card">
+<div class="icon">✓</div>
+<h3>احترافية</h3>
+<p>حلول مناسبة للاستخدام الشخصي والتجاري.</p>
+</article>
+
+<article class="card">
+<div class="icon">✓</div>
+<h3>تغطية وطنية</h3>
+<p>مقرنا في ورززات ونخدم مختلف المدن المغربية.</p>
+</article>
+
+<article class="card">
+<div class="icon">✓</div>
+<h3>حلول متكاملة</h3>
+<p>البيع، الصيانة، الكراء والإكسسوارات في مكان واحد.</p>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="cities">
+<div class="container">
+<div class="section-head center">
+<div class="eyebrow">KIMPOOL • OUARZAZATE</div>
+<h2>من ورززات إلى جميع أنحاء المغرب</h2>
+<p>مقر Kimpool في ورززات، ونوفر خدماتنا ومنتجاتنا للزبائن في مختلف المدن المغربية.</p>
+</div>
+
+<div class="tags">
+<span class="tag">ورززات</span>
+<span class="tag">مراكش</span>
+<span class="tag">أكادير</span>
+<span class="tag">الدار البيضاء</span>
+<span class="tag">الرباط</span>
+<span class="tag">فاس</span>
+<span class="tag">طنجة</span>
+<span class="tag">مكناس</span>
+<span class="tag">وجدة</span>
+<span class="tag">تطوان</span>
+<span class="tag">الراشيدية</span>
+<span class="tag">بني ملال</span>
+<span class="tag">وغيرها</span>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head center">
+<div class="eyebrow">GALERIE</div>
+<h2>عالم البلياردو بأسلوب Kimpool</h2>
+<p>صور ومشاهد مستوحاة من عالم البلياردو الفاخر.</p>
+</div>
+
+<div class="gallery">
+<div class="g1"></div>
+<div class="g2"></div>
+<div class="g3"></div>
+<div class="g4"></div>
+<div class="g5"></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container contact-grid">
+
+<div class="contact-box">
+<div class="eyebrow">DEVIS GRATUIT</div>
+<h2>اطلب عرض سعر</h2>
+<p>أخبرنا بما تحتاج، وسنساعدك في تحديد الحل المناسب. يمكنك أيضاً التواصل معنا مباشرة عبر WhatsApp.</p>
+
+<a class="btn btn-primary" href="#" onclick="openWhatsApp('السلام عليكم، أريد الاستفسار عن خدمات Kimpool.')">
+تواصل معنا عبر WhatsApp
+</a>
+
+<p style="margin-top:22px">
+<strong>📍 ورززات — المغرب</strong><br>
+نخدم جميع المدن المغربية
+</p>
+</div>
+
+<form class="form" onsubmit="sendForm(event)">
+<div class="form-grid">
+
+<div class="field">
+<label>الاسم</label>
+<input id="name" required placeholder="اسمك">
+</div>
+
+<div class="field">
+<label>رقم الهاتف</label>
+<input id="phone" required placeholder="06XXXXXXXX">
+</div>
+
+<div class="field">
+<label>المدينة</label>
+<input id="city" required placeholder="مثلاً: مراكش">
+</div>
+
+<div class="field">
+<label>الخدمة المطلوبة</label>
+<select id="service">
+<option>شراء طاولة</option>
+<option>صيانة</option>
+<option>إعادة تلبيد</option>
+<option>كراء</option>
+<option>إكسسوارات</option>
+<option>تجهيز مشروع</option>
+<option>أخرى</option>
+</select>
+</div>
+
+<div class="field full">
+<label>الرسالة</label>
+<textarea id="message" placeholder="أخبرنا بما تحتاج..."></textarea>
+</div>
+
+<div class="field full">
+<button class="btn btn-primary" type="submit">إرسال الطلب عبر WhatsApp</button>
+</div>
+
+</div>
+</form>
+
+</div>
+</section>
+
+<section class="final">
+<div class="container">
+<h2>جاهز لتجهيز طاولتك؟</h2>
+<p>أخبرنا بما تحتاج وسنساعدك في إيجاد الحل المناسب.</p>
+<a class="btn" href="#" onclick="openWhatsApp('السلام عليكم، أريد التواصل مع Kimpool.')">تواصل معنا عبر WhatsApp</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container foot">
+
+<div>
+<div class="logo">KIM<span>POOL</span></div>
+<p>كل ما تحتاجه للبلياردو في المغرب<br>ورززات — المغرب</p>
+<small>© 2026 Kimpool. Tous droits réservés.</small>
+</div>
+
+<div>
+<div class="footer-links">
+<a href="#services">الخدمات</a>
+<a href="#tables">الطاولات</a>
+<a href="#maintenance">الصيانة</a>
+<a href="#b2b">للمهنيين</a>
+<a href="#contact">تواصل معنا</a>
+</div>
+<p><small>بيع الطاولات | الصيانة | إعادة التلبيد | الكراء | الإكسسوارات</small></p>
+</div>
+
+</div>
+</footer>
+
+<a class="float-wa" href="#" aria-label="WhatsApp" onclick="openWhatsApp('السلام عليكم، أريد الاستفسار عن خدمات Kimpool.')">✆</a>
+
+<script>
+const WHATSAPP_NUMBER="WHATSAPP_NUMBER";
+
+function openWhatsApp(text){
+if(WHATSAPP_NUMBER==="WHATSAPP_NUMBER"){
+alert("أضف رقم WhatsApp الخاص بـ Kimpool داخل الملف index.html مكان WHATSAPP_NUMBER.");
+return;
+}
+const clean=WHATSAPP_NUMBER.replace(/\D/g,'');
+window.open("https://wa.me/"+clean+"?text="+encodeURIComponent(text),"_blank");
+}
+
+function sendForm(e){
+e.preventDefault();
+
+const msg=`السلام عليكم، أريد طلب عرض سعر من Kimpool.
+
+الاسم: ${document.getElementById('name').value}
+الهاتف: ${document.getElementById('phone').value}
+المدينة: ${document.getElementById('city').value}
+الخدمة: ${document.getElementById('service').value}
+الرسالة: ${document.getElementById('message').value}`;
+
+openWhatsApp(msg);
+}
+</script>
+
+</body>
+  </html>
