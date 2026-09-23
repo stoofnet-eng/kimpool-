@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#06110f">
+<meta name="description" content="KIMPOOL — حلول البلياردو في المغرب: بيع الطاولات، الصيانة، إعادة التلبيد، الكراء والإكسسوارات.">
+<title>KIMPOOL | حلول البلياردو في المغرب</title>
+
+<style>
+:root{
+  --bg:#06110f;
+  --bg2:#0a1916;
+  --teal:#10cbb9;
+  --teal2:#0a8f83;
+  --white:#fff;
+  --text:#edf7f4;
+  --muted:#a9bbb6;
+  --dark:#07100e;
+  --card:#0c1d19;
+  --line:rgba(255,255,255,.11);
+  --shadow:0 25px 70px rgba(0,0,0,.35);
+  --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;
+  background:#f6f9f8;color:#10201d;line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1180px,92%);margin:auto}
+
+/* NAV */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(4,12,10,.78);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(14px);
+}
+.nav{
+  min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:950;letter-spacing:2px;font-size:25px}
+.brand-mark{
+  width:38px;height:38px;border:2px solid var(--teal);
+  color:var(--teal);display:grid;place-items:center;
+  font-size:24px;font-weight:950;transform:skew(-10deg);
+}
+.links{display:flex;gap:26px;color:#e9f2ef;font-size:14px;font-weight:750}
+.links a{transition:.2s}
+.links a:hover{color:var(--teal)}
+.wa-nav{
+  background:var(--teal);color:#001411;border-radius:999px;
+  padding:10px 18px;font-weight:900;font-size:13px;white-space:nowrap;
+}
+
+/* HERO */
+.hero{
+  min-height:760px;position:relative;display:flex;align-items:center;
+  overflow:hidden;background:var(--bg);color:#fff;padding-top:72px;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:
+    linear-gradient(90deg,rgba(3,10,9,.97) 0%,rgba(3,10,9,.78) 38%,rgba(3,10,9,.28) 75%,rgba(3,10,9,.55) 100%),
+    url("https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=78&w=1800");
+  background-size:cover;background-position:center;
+}
+.hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:170px;
+  background:linear-gradient(transparent,var(--bg));z-index:1;
+}
+.hero-content{position:relative;z-index:2;padding:70px 0 100px;max-width:650px}
+.eyebrow{
+  color:var(--teal);font-size:12px;font-weight:950;
+  letter-spacing:4px;margin-bottom:15px;
+}
+.hero h1{
+  margin:0 0 20px;font-size:clamp(43px,6.3vw,78px);
+  line-height:1.06;font-weight:950;letter-spacing:-1px;
+}
+.hero h1 span{color:var(--teal)}
+.hero p{max-width:600px;color:#e0ebe8;font-size:18px;margin:0 0 28px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:12px 22px;border-radius:999px;
+  font-weight:900;border:1px solid transparent;cursor:pointer;
+}
+.btn-primary{background:var(--teal);color:#001411}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-outline{border-color:rgba(255,255,255,.38);color:#fff}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal)}
+
+/* TRUST */
+.trust{background:var(--bg);color:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{text-align:center;padding:25px 12px;border-left:1px solid var(--line)}
+.trust-item:last-child{border-left:0}
+.icon{color:var(--teal);font-size:25px;font-weight:950}
+.trust-item strong{display:block;font-size:15px;margin-top:3px}
+.trust-item small{color:var(--muted);font-size:12px}
+
+/* SECTIONS */
+section{padding:90px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+.kicker{color:var(--teal2);font-size:11px;font-weight:950;letter-spacing:3px}
+.section-head h2{font-size:clamp(32px,4vw,48px);line-height:1.15;margin:8px 0 12px}
+.section-head p{color:#667873;margin:0}
+
+/* SERVICES */
+.services{background:#f7faf9}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.card{
+  background:#fff;border:1px solid #e1eae6;border-radius:var(--radius);
+  padding:28px;box-shadow:0 12px 40px rgba(7,17,15,.06);
+  transition:.25s;
+}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.card-num{color:var(--teal2);font-size:12px;font-weight:950}
+.card h3{font-size:21px;margin:12px 0 7px}
+.card p{font-size:14px;color:#65736f;margin:0}
+
+/* SHOWCASE */
+.showcase{background:#fff}
+.show-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.show-card{
+  min-height:360px;border-radius:24px;overflow:hidden;position:relative;
+  background:
+    linear-gradient(180deg,transparent 30%,rgba(0,0,0,.82)),
+    url("https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=70&w=1200");
+  background-size:cover;background-position:center;box-shadow:var(--shadow);
+}
+.show-card.small{min-height:360px;background-position:55% center}
+.show-copy{position:absolute;bottom:0;right:0;left:0;padding:28px;color:#fff}
+.show-copy .tag{color:var(--teal);font-weight:950;font-size:11px;letter-spacing:2px}
+.show-copy h3{font-size:28px;line-height:1.2;margin:6px 0}
+.show-copy p{color:#d4dfdc;margin:0;font-size:14px}
+
+/* B2B */
+.b2b{background:var(--bg);color:#fff}
+.b2b-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.b2b h2{font-size:clamp(32px,4vw,50px);line-height:1.15;margin:10px 0 15px}
+.b2b p{color:var(--muted)}
+.b2b-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.b2b-item{
+  padding:18px;border:1px solid var(--line);border-radius:17px;
+  background:rgba(255,255,255,.035);font-weight:800;
+}
+.b2b-item span{display:block;color:var(--teal);font-size:20px;margin-bottom:5px}
+
+/* PROCESS */
+.process{background:#f7faf9}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:#fff;border:1px solid #e1eae6;border-radius:20px;padding:25px}
+.step-no{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#dff7f3;color:#08786f;font-weight:950}
+.step h3{margin:14px 0 5px}
+.step p{margin:0;color:#65736f;font-size:14px}
+
+/* CTA */
+.cta-wrap{padding:70px 0}
+.cta{
+  border-radius:28px;padding:52px;
+  background:linear-gradient(135deg,#0a3731,#06110f);
+  color:#fff;box-shadow:var(--shadow);
+}
+.cta h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:8px 0}
+.cta p{color:var(--muted);max-width:650px}
+
+/* FOOTER */
+footer{background:#030807;color:#91a39f;padding:30px 0;font-size:13px}
+.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* FLOATING WHATSAPP */
+.float-wa{
+  position:fixed;left:18px;bottom:18px;z-index:120;
+  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+  background:var(--teal);color:#001411;font-size:24px;font-weight:950;
+  box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+/* MOBILE */
+.mobile-menu{display:none}
+@media(max-width:900px){
+  .links{display:none}
+  .mobile-menu{display:block;background:none;border:0;color:#fff;font-size:25px}
+  .hero{min-height:700px}
+  .hero-bg{
+    background:
+      linear-gradient(180deg,rgba(3,10,9,.38),rgba(3,10,9,.68) 48%,rgba(3,10,9,.98) 100%),
+      url("https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=76&w=1400");
+    background-position:center;
+  }
+  .hero-content{padding:60px 0 70px;max-width:700px}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-item:nth-child(2){border-left:0}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .show-grid,.b2b-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .container{width:min(94%,520px)}
+  .nav{min-height:64px}
+  .brand{font-size:20px}
+  .brand-mark{width:31px;height:31px;font-size:20px}
+  .wa-nav{padding:9px 12px;font-size:11px}
+  .hero{min-height:720px;padding-top:64px}
+  .hero-content{padding:50px 0 60px}
+  .hero h1{font-size:43px}
+  .hero p{font-size:15px}
+  .actions{display:grid}
+  .actions .btn{width:100%}
+  .trust-item{padding:18px 7px}
+  .trust-item strong{font-size:12px}
+  .trust-item small{font-size:10px}
+  section{padding:62px 0}
+  .cards{grid-template-columns:1fr}
+  .show-card,.show-card.small{min-height:300px}
+  .b2b-list{grid-template-columns:1fr}
+  .cta{padding:30px 22px;border-radius:21px}
+  .float-wa{width:54px;height:54px;left:14px;bottom:14px}
+}
+
+/* ACCESSIBLE REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .card{transition:none}
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <nav class="container nav">
+    <a class="brand" href="#home" aria-label="KIMPOOL">
+      <span class="brand-mark">K</span>KIMPOOL
+    </a>
+
+    <div class="links">
+      <a href="#home">الرئيسية</a>
+      <a href="#services">الخدمات</a>
+      <a href="#showcase">المنتجات</a>
+      <a href="#b2b">للمهنيين</a>
+      <a href="#contact">تواصل معنا</a>
+    </div>
+
+    <a class="wa-nav" href="#" onclick="openWhatsApp();return false">واتساب</a>
+    <button class="mobile-menu" aria-label="القائمة" onclick="scrollToServices()">☰</button>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">BILLIARD SOLUTIONS • MAROC</div>
+      <h1>كل ما تحتاجه<br><span>للبلياردو في المغرب</span></h1>
+      <p>
+        بيع، صيانة، إعادة تلبيد، كراء وإكسسوارات البلياردو،
+        بحلول موجهة للأفراد والمهنيين.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#" onclick="openWhatsApp();return false">
+          اطلب عرض سعر عبر واتساب
+        </a>
+        <a class="btn btn-outline" href="#services">اكتشف خدماتنا</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <div class="icon">◆</div>
+      <strong>طاولات بلياردو</strong>
+      <small>اختيارات حسب الاحتياج</small>
+    </div>
+    <div class="trust-item">
+      <div class="icon">✓</div>
+      <strong>الصيانة والتلبيد</strong>
+      <small>للحفاظ على جودة اللعب</small>
+    </div>
+    <div class="trust-item">
+      <div class="icon">⌖</div>
+      <strong>خدمة بالمغرب</strong>
+      <small>حسب المدينة والتوفر</small>
+    </div>
+    <div class="trust-item">
+      <div class="icon">＋</div>
+      <strong>حلول متكاملة</strong>
+      <small>كراء وإكسسوارات</small>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">NOS SERVICES</div>
+      <h2>حلول البلياردو في مكان واحد</h2>
+      <p>من اختيار الطاولة إلى الصيانة والتجهيزات، تواصل معنا حسب احتياجك.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-num">01 / TABLES</div>
+        <h3>بيع الطاولات</h3>
+        <p>طاولات بلياردو للأفراد والمشاريع، حسب المساحة والاحتياج.</p>
+      </article>
+      <article class="card">
+        <div class="card-num">02 / SERVICE</div>
+        <h3>الصيانة</h3>
+        <p>خدمة صيانة وإعادة تلبيد للمساعدة في الحفاظ على أداء الطاولة.</p>
+      </article>
+      <article class="card">
+        <div class="card-num">03 / RENTAL</div>
+        <h3>الكراء</h3>
+        <p>حلول كراء للمناسبات والمشاريع حسب الطلب والتوفر.</p>
+      </article>
+      <article class="card">
+        <div class="card-num">04 / ACCESSORIES</div>
+        <h3>الإكسسوارات</h3>
+        <p>مستلزمات وتجهيزات البلياردو لتكمل مشروعك.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="showcase" id="showcase">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">KIMPOOL EXPERIENCE</div>
+      <h2>البلياردو جزء من المكان</h2>
+      <p>تصميم بصري يركز على الطاولة والفضاء ويعطي إحساساً احترافياً للزائر.</p>
+    </div>
+
+    <div class="show-grid">
+      <div class="show-card">
+        <div class="show-copy">
+          <div class="tag">TABLES • DESIGN</div>
+          <h3>طاولة ترفع حضور المكان</h3>
+          <p>للمنازل، المقاهي، الفنادق وقاعات الألعاب.</p>
+        </div>
+      </div>
+      <div class="show-card small">
+        <div class="show-copy">
+          <div class="tag">SERVICE • CARE</div>
+          <h3>الحفاظ على جودة الطاولة</h3>
+          <p>الصيانة وإعادة التلبيد حسب الحاجة.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="b2b" id="b2b">
+  <div class="container b2b-grid">
+    <div>
+      <div class="kicker">B2B • PROFESSIONNELS</div>
+      <h2>حلول للمقاهي والفنادق وقاعات الألعاب</h2>
+      <p>
+        عندك مشروع وكتحتاج طاولة، كراء، صيانة أو إكسسوارات؟
+        أرسل لنا التفاصيل ونناقشو معك الاحتياج.
+      </p>
+      <a class="btn btn-primary" href="#" onclick="openWhatsApp('بغيت نناقش معاكم مشروع B2B ديالي.');return false">
+        ناقش مشروعك عبر واتساب
+      </a>
+    </div>
+
+    <div class="b2b-list">
+      <div class="b2b-item"><span>01</span>المقاهي</div>
+      <div class="b2b-item"><span>02</span>الفنادق</div>
+      <div class="b2b-item"><span>03</span>قاعات الألعاب</div>
+      <div class="b2b-item"><span>04</span>المشاريع والطلبات</div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">SIMPLE PROCESS</div>
+      <h2>كيف تبدأ مع KIMPOOL؟</h2>
+      <p>ثلاث خطوات بسيطة باش نوصلو للاحتياج ديالك.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-no">01</div>
+        <h3>تواصل معنا</h3>
+        <p>أرسل نوع الخدمة أو المشروع الذي تبحث عنه.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">02</div>
+        <h3>نحدد الاحتياج</h3>
+        <p>نراجع التفاصيل والمساحة والاستعمال حسب الحالة.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">03</div>
+        <h3>نبدأ التنفيذ</h3>
+        <p>نتابع معك الخطوة المناسبة حسب الخدمة المطلوبة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-wrap" id="contact">
+  <div class="container">
+    <div class="cta">
+      <div class="kicker">KIMPOOL • MAROC</div>
+      <h2>عندك مشروع أو كتقلب على طاولة؟</h2>
+      <p>تواصل معنا مباشرة عبر واتساب وأرسل لنا طلبك.</p>
+      <a class="btn btn-primary" href="#" onclick="openWhatsApp();return false">
+        اطلب عرض سعر الآن
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer">
+    <span>© KIMPOOL</span>
+    <span>حلول البلياردو في المغرب</span>
+    <span>واتساب: 07 12 60 58 06</span>
+  </div>
+</footer>
+
+<a class="float-wa" href="#" onclick="openWhatsApp();return false" aria-label="واتساب">◉</a>
+
+<script>
+const WHATSAPP_NUMBER = "212712605806";
+
+function openWhatsApp(customMessage){
+  const message = customMessage || "السلام عليكم، بغيت معلومات وعرض سعر من KIMPOOL.";
+  const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+  window.open(url,"_blank","noopener");
+}
+
+function scrollToServices(){
+  document.getElementById("services").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
+
