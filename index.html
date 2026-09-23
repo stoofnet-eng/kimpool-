@@ -1,880 +1,455 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
-  <title>KIMPOOL | البلياردو في المغرب</title>
-
-  <meta name="description" content="KIMPOOL شركة متخصصة في البلياردو من ورزازات، تقدم بيع وصيانة وكراء طاولات البلياردو، تغيير القماش، الإكسسوارات وتجهيز فضاءات ومشاريع في مختلف المدن المغربية.">
-  <meta name="keywords" content="بلياردو المغرب, طاولات بلياردو المغرب, بيع طاولات بلياردو, صيانة البلياردو, كراء طاولات البلياردو, بلياردو ورزازات, تجهيز قاعات البلياردو">
-  <meta name="author" content="KIMPOOL">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#050708">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="KIMPOOL | البلياردو في المغرب">
-  <meta property="og:description" content="حلول البلياردو من البيع والصيانة إلى تجهيز المساحات والمشاريع في مختلف المدن المغربية.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1600&q=85">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KIMPOOL | البلياردو في المغرب">
-  <meta name="twitter:description" content="متخصصون في البلياردو من ورزازات إلى مختلف المدن المغربية.">
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1600&q=85">
-
-  <link rel="canonical" href="https://stoofnet-eng.github.io/kimpool-/">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    /* =========================================================
-       KIMPOOL — DESIGN SYSTEM
-       Mobile First
-    ========================================================= */
-
-    :root {
-      --black: #050708;
-      --charcoal: #0b1110;
-      --surface: #101817;
-      --surface-2: #141d1b;
-      --teal-dark: #0f766e;
-      --teal: #14b8a6;
-      --teal-soft: rgba(20, 184, 166, 0.12);
-      --white: #f5f7f6;
-      --muted: #a7b0ad;
-      --muted-2: #707a77;
-      --border: rgba(255, 255, 255, 0.09);
-      --border-teal: rgba(20, 184, 166, 0.28);
-
-      --container: 1180px;
-      --radius-sm: 12px;
-      --radius-md: 18px;
-      --radius-lg: 28px;
-
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-
-      --ease: cubic-bezier(.22, .61, .36, 1);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      width: 100%;
-      max-width: 100%;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      background: var(--black);
-    }
-
-    body {
-      width: 100%;
-      max-width: 100%;
-      min-height: 100vh;
-      overflow-x: hidden;
-      background:
-        radial-gradient(circle at 90% 0%, rgba(15, 118, 110, 0.10), transparent 28rem),
-        var(--black);
-      color: var(--white);
-      font-family: "Cairo", sans-serif;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    body.menu-open {
-      overflow: hidden;
-    }
-
-    img,
-    svg,
-    video,
-    iframe {
-      max-width: 100%;
-    }
-
-    img {
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    button {
-      cursor: pointer;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    section {
-      width: 100%;
-      max-width: 100%;
-      position: relative;
-    }
-
-    .container {
-      width: min(100% - 32px, var(--container));
-      margin-inline: auto;
-    }
-
-    .en {
-      font-family: "Manrope", sans-serif;
-      letter-spacing: 0.02em;
-    }
-
-    .section {
-      padding: 76px 0;
-    }
-
-    .section-header {
-      margin-bottom: 34px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--teal);
-      font-family: "Manrope", sans-serif;
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      margin-bottom: 13px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 24px;
-      height: 1px;
-      background: var(--teal);
-      display: inline-block;
-    }
-
-    .section-title {
-      font-size: clamp(1.8rem, 7vw, 3.2rem);
-      line-height: 1.18;
-      font-weight: 800;
-      letter-spacing: -0.035em;
-      max-width: 720px;
-    }
-
-    .section-description {
-      color: var(--muted);
-      margin-top: 15px;
-      max-width: 650px;
-      font-size: 0.96rem;
-    }
-
-    /* =========================================================
-       BUTTONS
-    ========================================================= */
-
-    .btn {
-      min-height: 50px;
-      padding: 12px 20px;
-      border-radius: 13px;
-      border: 1px solid transparent;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      transition:
-        transform .25s var(--ease),
-        background .25s var(--ease),
-        border-color .25s var(--ease),
-        box-shadow .25s var(--ease);
-      touch-action: manipulation;
-    }
-
-    .btn-primary {
-      color: #03100e;
-      background: var(--teal);
-      box-shadow: 0 10px 30px rgba(20, 184, 166, 0.16);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: #22c7b4;
-      box-shadow: 0 15px 35px rgba(20, 184, 166, 0.24);
-    }
-
-    .btn-secondary {
-      color: var(--white);
-      background: rgba(255, 255, 255, 0.035);
-      border-color: var(--border);
-    }
-
-    .btn-secondary:hover {
-      transform: translateY(-2px);
-      border-color: var(--border-teal);
-      background: var(--teal-soft);
-    }
-
-    .btn svg {
-      width: 18px;
-      height: 18px;
-      flex: 0 0 auto;
-    }
-
-    /* =========================================================
-       HEADER
-    ========================================================= */
-
-    .site-header {
-      position: fixed;
-      inset: 0 0 auto 0;
-      z-index: 1000;
-      background: rgba(5, 7, 8, 0.78);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-    }
-
-    .header-inner {
-      min-height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-    }
-
-    .brand-word {
-      font-family: "Manrope", sans-serif;
-      font-size: 1.05rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-    }
-
-    .desktop-nav {
-      display: none;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .header-whatsapp {
-      min-height: 42px;
-      padding: 8px 13px;
-      font-size: 0.78rem;
-      border-radius: 11px;
-    }
-
-    .menu-toggle {
-      width: 42px;
-      height: 42px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: transparent;
-      color: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 11px;
-    }
-
-    .menu-toggle svg {
-      width: 21px;
-      height: 21px;
-    }
-
-    .mobile-menu {
-      position: fixed;
-      inset: 70px 0 0;
-      z-index: 999;
-      background: rgba(5, 7, 8, 0.98);
-      transform: translateY(-12px);
-      opacity: 0;
-      visibility: hidden;
-      transition: .25s var(--ease);
-      padding: 22px 16px;
-      overflow-y: auto;
-    }
-
-    .mobile-menu.active {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .mobile-nav {
-      display: grid;
-      gap: 6px;
-    }
-
-    .mobile-nav a {
-      min-height: 52px;
-      padding: 12px 14px;
-      display: flex;
-      align-items: center;
-      border-radius: 12px;
-      color: var(--muted);
-      border: 1px solid transparent;
-      font-weight: 700;
-    }
-
-    .mobile-nav a:hover,
-    .mobile-nav a:focus-visible {
-      color: var(--white);
-      background: var(--teal-soft);
-      border-color: var(--border-teal);
-    }
-
-    /* =========================================================
-       HERO
-    ========================================================= */
-
-    .hero {
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      padding: 112px 0 55px;
-      overflow: hidden;
-    }
-
-    .hero-background {
-      position: absolute;
-      inset: 0;
-      z-index: -3;
-      background:
-        linear-gradient(180deg, rgba(5,7,8,.38) 0%, rgba(5,7,8,.72) 60%, var(--black) 100%),
-        linear-gradient(90deg, rgba(5,7,8,.88) 0%, rgba(5,7,8,.48) 100%),
-        url("https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1800&q=85") center / cover no-repeat;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0;
-      height: 180px;
-      background: linear-gradient(transparent, var(--black));
-      z-index: -2;
-      pointer-events: none;
-    }
-
-    .hero-content {
-      max-width: 720px;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      min-height: 32px;
-      padding: 5px 11px;
-      margin-bottom: 18px;
-      border: 1px solid rgba(20, 184, 166, 0.28);
-      border-radius: 999px;
-      background: rgba(15, 118, 110, 0.11);
-      color: #72e1d4;
-      font-family: "Manrope", sans-serif;
-      font-size: 0.64rem;
-      font-weight: 800;
-      letter-spacing: .08em;
-    }
-
-    .hero-badge span {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--teal);
-      box-shadow: 0 0 12px var(--teal);
-    }
-
-    .hero-brand {
-      color: var(--teal);
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(0.9rem, 3vw, 1.1rem);
-      font-weight: 800;
-      letter-spacing: .22em;
-      margin-bottom: 9px;
-    }
-
-    .hero-title {
-      font-size: clamp(2.25rem, 11vw, 5.4rem);
-      line-height: 1.04;
-      font-weight: 800;
-      letter-spacing: -0.055em;
-      max-width: 750px;
-    }
-
-    .hero-title strong {
-      color: var(--teal);
-      font-weight: 800;
-    }
-
-    .hero-text {
-      margin-top: 19px;
-      max-width: 610px;
-      color: #d0d6d4;
-      font-size: 0.96rem;
-      line-height: 1.9;
-    }
-
-    .hero-actions {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 27px;
-      max-width: 420px;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 17px;
-      margin-top: 25px;
-      color: var(--muted);
-      font-size: 0.76rem;
-    }
-
-    .hero-meta-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-meta-item svg {
-      width: 14px;
-      height: 14px;
-      color: var(--teal);
-    }
-
-    /* =========================================================
-       INTRO
-    ========================================================= */
-
-    .intro {
-      padding: 36px 0 74px;
-    }
-
-    .intro-card {
-      position: relative;
-      overflow: hidden;
-      padding: 25px 20px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      background:
-        radial-gradient(circle at 100% 0%, rgba(20,184,166,.09), transparent 40%),
-        linear-gradient(135deg, #0c1312, #090e0d);
-    }
-
-    .intro-card::before {
-      content: "";
-      position: absolute;
-      inset-inline-start: 0;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: var(--teal);
-    }
-
-    .intro-card h2 {
-      font-size: 1.45rem;
-      line-height: 1.3;
-      margin-bottom: 9px;
-    }
-
-    .intro-card p {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    /* =========================================================
-       SERVICES
-    ========================================================= */
-
-    .services {
-      background: linear-gradient(180deg, var(--black), #080d0c);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-
-    .service-card {
-      position: relative;
-      padding: 23px 20px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012));
-      transition:
-        transform .3s var(--ease),
-        border-color .3s var(--ease),
-        background .3s var(--ease);
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--border-teal);
-      background: linear-gradient(145deg, rgba(20,184,166,.08), rgba(255,255,255,.015));
-    }
-
-    .service-number {
-      position: absolute;
-      top: 17px;
-      inset-inline-start: 18px;
-      color: rgba(255,255,255,.09);
-      font-family: "Manrope", sans-serif;
-      font-size: 2.5rem;
-      line-height: 1;
-      font-weight: 800;
-    }
-
-    .service-icon {
-      width: 46px;
-      height: 46px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 13px;
-      color: var(--teal);
-      background: var(--teal-soft);
-      border: 1px solid rgba(20,184,166,.15);
-      margin-bottom: 17px;
-    }
-
-    .service-icon svg {
-      width: 23px;
-      height: 23px;
-    }
-
-    .service-card h3 {
-      font-size: 1.02rem;
-      margin-bottom: 7px;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 0.83rem;
-      line-height: 1.75;
-    }
-
-    /* =========================================================
-       B2B
-    ========================================================= */
-
-    .b2b {
-      padding-top: 78px;
-    }
-
-    .b2b-card {
-      overflow: hidden;
-      position: relative;
-      border: 1px solid var(--border-teal);
-      border-radius: var(--radius-lg);
-      background:
-        radial-gradient(circle at 100% 20%, rgba(20,184,166,.17), transparent 35%),
-        linear-gradient(135deg, #0c1715, #07100f);
-      box-shadow: var(--shadow);
-    }
-
-    .b2b-content {
-      padding: 29px 21px;
-    }
-
-    .b2b-title {
-      font-size: clamp(1.8rem, 7vw, 3.2rem);
-      line-height: 1.16;
-      font-weight: 800;
-      margin-bottom: 13px;
-    }
-
-    .b2b-text {
-      color: var(--muted);
-      font-size: 0.9rem;
-      max-width: 650px;
-    }
-
-    .b2b-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 9px;
-      margin: 24px 0;
-    }
-
-    .b2b-list li {
-      min-width: 0;
-      display: flex;
-      align-items: flex-start;
-      gap: 7px;
-      color: #d7dddb;
-      font-size: 0.78rem;
-    }
-
-    .check {
-      color: var(--teal);
-      flex: 0 0 auto;
-      margin-top: 4px;
-    }
-
-    /* =========================================================
-       GALLERY
-    ========================================================= */
-
-    .gallery {
-      padding-bottom: 80px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      min-width: 0;
-      aspect-ratio: 1 / 1;
-      border-radius: 14px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-    }
-
-    .gallery-item:first-child {
-      grid-column: span 2;
-      aspect-ratio: 16 / 9;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .6s var(--ease);
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.045);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      inset: auto 0 0;
-      padding: 28px 14px 13px;
-      background: linear-gradient(transparent, rgba(0,0,0,.78));
-      pointer-events: none;
-    }
-
-    .gallery-overlay span {
-      color: white;
-      font-size: .73rem;
-      font-weight: 700;
-    }
-
-    /* =========================================================
-       VIDEO
-    ========================================================= */
-
-    .video-section {
-      padding-top: 20px;
-    }
-
-    .video-box {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      background:
-        radial-gradient(circle, rgba(20,184,166,.12), transparent 45%),
-        var(--surface);
-      box-shadow: var(--shadow);
-    }
-
-    .video-box iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .video-placeholder {
-      width: 100%;
-      height: 100%;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 25px;
-    }
-
-    .video-placeholder-inner {
-      max-width: 400px;
-    }
-
-    .video-placeholder-icon {
-      width: 58px;
-      height: 58px;
-      margin: 0 auto 13px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--border-teal);
-      border-radius: 50%;
-      color: var(--teal);
-      background: var(--teal-soft);
-    }
-
-    .video-placeholder h3 {
-      font-size: 1rem;
-      margin-bottom: 5px;
-    }
-
-    .video-placeholder p {
-      color: var(--muted);
-      font-size: .78rem;
-    }
-
-    /* =========================================================
-       PROCESS
-    ========================================================= */
-
-    .process {
-      background: #080d0c;
-    }
-
-    .process-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 11px;
-    }
-
-    .process-card {
-      position: relative;
-      display: grid;
-      grid-template-columns: 55px 1fr;
-      align-items: center;
-      gap: 15px;
-      padding: 19px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      background: rgba(255,255,255,.02);
-    }
-
-    .process-number {
-      width: 52px;
-      height: 52px;
-      display: grid;
-      place-items: center;
-      border-radius: 15px;
-      background: var(--teal-soft);
-      border: 1px solid rgba(20,184,166,.18);
-      color: var(--teal);
-      font-family: "Manrope", sans-serif;
-      font-size: .82rem;
-      font-weight: 800;
-    }
-
-    .process-card h3 {
-      font-size: .96rem;
-      margin-bottom: 3px;
-    }
-
-    .process-card p {
-      color: var(--muted);
-      font-size: .76rem;
-    }
-
-    /* =========================================================
-       CITIES
-    ========================================================= */
-
-    .cities-wrapper {
-      padding: 25px 20px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      background: linear-gradient(135deg, rgba(255,255,255,.035), rgba(255,255,255,.012));
-    }
-
-    .cities-note {
-      color: var(--muted);
-      font-size: .8rem;
-      margin-bottom: 17px;
-    }
-
-    .cities-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .city {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: var(--teal-soft);
-      border: 1px solid rgba(20,184,166,.16);
-      color: #d7efeb;
-      font-size: .76rem;
-      font-weight: 600;
-    }
-
-    /* =========================================================
-       CONTACT
-    ========================================================= */
-
-    .contact-grid {
-      display: grid;
-      gap: 30px;
-    }
-
-    .contact-copy {
-      max-width: 600px;
-    }
-
-    .contact-copy p {
-      color: var(--muted);
-      margin-top: 13px;
-      font-size: .9rem;
-    }
-
-    .contact-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin-top: 20px;
-      color: var(--teal);
-      font-family: "Manrope", sans-serif;
-      font-weight: 800;
-      direction: ltr;
-    }
-
-    .contact-whatsapp svg {
-   ا
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#06110f">
+<meta name="description" content="KIMPOOL — حلول البلياردو في المغرب: بيع الطاولات، الصيانة، إعادة التلبيد، الكراء والإكسسوارات.">
+<title>KIMPOOL | حلول البلياردو في المغرب</title>
+
+<style>
+:root{
+  --bg:#06110f;
+  --bg2:#0a1916;
+  --teal:#10cbb9;
+  --teal2:#0a8f83;
+  --white:#fff;
+  --text:#edf7f4;
+  --muted:#a9bbb6;
+  --dark:#07100e;
+  --card:#0c1d19;
+  --line:rgba(255,255,255,.11);
+  --shadow:0 25px 70px rgba(0,0,0,.35);
+  --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;
+  background:#f6f9f8;color:#10201d;line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1180px,92%);margin:auto}
+
+/* NAV */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(4,12,10,.78);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(14px);
+}
+.nav{
+  min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:950;letter-spacing:2px;font-size:25px}
+.brand-mark{
+  width:38px;height:38px;border:2px solid var(--teal);
+  color:var(--teal);display:grid;place-items:center;
+  font-size:24px;font-weight:950;transform:skew(-10deg);
+}
+.links{display:flex;gap:26px;color:#e9f2ef;font-size:14px;font-weight:750}
+.links a{transition:.2s}
+.links a:hover{color:var(--teal)}
+.wa-nav{
+  background:var(--teal);color:#001411;border-radius:999px;
+  padding:10px 18px;font-weight:900;font-size:13px;white-space:nowrap;
+}
+
+/* HERO */
+.hero{
+  min-height:760px;position:relative;display:flex;align-items:center;
+  overflow:hidden;background:var(--bg);color:#fff;padding-top:72px;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:
+    linear-gradient(90deg,rgba(3,10,9,.97) 0%,rgba(3,10,9,.78) 38%,rgba(3,10,9,.28) 75%,rgba(3,10,9,.55) 100%),
+    url("https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=78&w=1800");
+  background-size:cover;background-position:center;
+}
+.hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:170px;
+  background:linear-gradient(transparent,var(--bg));z-index:1;
+}
+.hero-content{position:relative;z-index:2;padding:70px 0 100px;max-width:650px}
+.eyebrow{
+  color:var(--teal);font-size:12px;font-weight:950;
+  letter-spacing:4px;margin-bottom:15px;
+}
+.hero h1{
+  margin:0 0 20px;font-size:clamp(43px,6.3vw,78px);
+  line-height:1.06;font-weight:950;letter-spacing:-1px;
+}
+.hero h1 span{color:var(--teal)}
+.hero p{max-width:600px;color:#e0ebe8;font-size:18px;margin:0 0 28px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:12px 22px;border-radius:999px;
+  font-weight:900;border:1px solid transparent;cursor:pointer;
+}
+.btn-primary{background:var(--teal);color:#001411}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-outline{border-color:rgba(255,255,255,.38);color:#fff}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal)}
+
+/* TRUST */
+.trust{background:var(--bg);color:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{text-align:center;padding:25px 12px;border-left:1px solid var(--line)}
+.trust-item:last-child{border-left:0}
+.icon{color:var(--teal);font-size:25px;font-weight:950}
+.trust-item strong{display:block;font-size:15px;margin-top:3px}
+.trust-item small{color:var(--muted);font-size:12px}
+
+/* SECTIONS */
+section{padding:90px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+.kicker{color:var(--teal2);font-size:11px;font-weight:950;letter-spacing:3px}
+.section-head h2{font-size:clamp(32px,4vw,48px);line-height:1.15;margin:8px 0 12px}
+.section-head p{color:#667873;margin:0}
+
+/* SERVICES */
+.services{background:#f7faf9}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.card{
+  background:#fff;border:1px solid #e1eae6;border-radius:var(--radius);
+  padding:28px;box-shadow:0 12px 40px rgba(7,17,15,.06);
+  transition:.25s;
+}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.card-num{color:var(--teal2);font-size:12px;font-weight:950}
+.card h3{font-size:21px;margin:12px 0 7px}
+.card p{font-size:14px;color:#65736f;margin:0}
+
+/* SHOWCASE */
+.showcase{background:#fff}
+.show-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.show-card{
+  min-height:360px;border-radius:24px;overflow:hidden;position:relative;
+  background:
+    linear-gradient(180deg,transparent 30%,rgba(0,0,0,.82)),
+    url("https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=70&w=1200");
+  background-size:cover;background-position:center;box-shadow:var(--shadow);
+}
+.show-card.small{min-height:360px;background-position:55% center}
+.show-copy{position:absolute;bottom:0;right:0;left:0;padding:28px;color:#fff}
+.show-copy .tag{color:var(--teal);font-weight:950;font-size:11px;letter-spacing:2px}
+.show-copy h3{font-size:28px;line-height:1.2;margin:6px 0}
+.show-copy p{color:#d4dfdc;margin:0;font-size:14px}
+
+/* B2B */
+.b2b{background:var(--bg);color:#fff}
+.b2b-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.b2b h2{font-size:clamp(32px,4vw,50px);line-height:1.15;margin:10px 0 15px}
+.b2b p{color:var(--muted)}
+.b2b-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.b2b-item{
+  padding:18px;border:1px solid var(--line);border-radius:17px;
+  background:rgba(255,255,255,.035);font-weight:800;
+}
+.b2b-item span{display:block;color:var(--teal);font-size:20px;margin-bottom:5px}
+
+/* PROCESS */
+.process{background:#f7faf9}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:#fff;border:1px solid #e1eae6;border-radius:20px;padding:25px}
+.step-no{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#dff7f3;color:#08786f;font-weight:950}
+.step h3{margin:14px 0 5px}
+.step p{margin:0;color:#65736f;font-size:14px}
+
+/* CTA */
+.cta-wrap{padding:70px 0}
+.cta{
+  border-radius:28px;padding:52px;
+  background:linear-gradient(135deg,#0a3731,#06110f);
+  color:#fff;box-shadow:var(--shadow);
+}
+.cta h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:8px 0}
+.cta p{color:var(--muted);max-width:650px}
+
+/* FOOTER */
+footer{background:#030807;color:#91a39f;padding:30px 0;font-size:13px}
+.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* FLOATING WHATSAPP */
+.float-wa{
+  position:fixed;left:18px;bottom:18px;z-index:120;
+  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+  background:var(--teal);color:#001411;font-size:24px;font-weight:950;
+  box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+/* MOBILE */
+.mobile-menu{display:none}
+@media(max-width:900px){
+  .links{display:none}
+  .mobile-menu{display:block;background:none;border:0;color:#fff;font-size:25px}
+  .hero{min-height:700px}
+  .hero-bg{
+    background:
+      linear-gradient(180deg,rgba(3,10,9,.38),rgba(3,10,9,.68) 48%,rgba(3,10,9,.98) 100%),
+      url("https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=76&w=1400");
+    background-position:center;
+  }
+  .hero-content{padding:60px 0 70px;max-width:700px}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-item:nth-child(2){border-left:0}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .show-grid,.b2b-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .container{width:min(94%,520px)}
+  .nav{min-height:64px}
+  .brand{font-size:20px}
+  .brand-mark{width:31px;height:31px;font-size:20px}
+  .wa-nav{padding:9px 12px;font-size:11px}
+  .hero{min-height:720px;padding-top:64px}
+  .hero-content{padding:50px 0 60px}
+  .hero h1{font-size:43px}
+  .hero p{font-size:15px}
+  .actions{display:grid}
+  .actions .btn{width:100%}
+  .trust-item{padding:18px 7px}
+  .trust-item strong{font-size:12px}
+  .trust-item small{font-size:10px}
+  section{padding:62px 0}
+  .cards{grid-template-columns:1fr}
+  .show-card,.show-card.small{min-height:300px}
+  .b2b-list{grid-template-columns:1fr}
+  .cta{padding:30px 22px;border-radius:21px}
+  .float-wa{width:54px;height:54px;left:14px;bottom:14px}
+}
+
+/* ACCESSIBLE REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .card{transition:none}
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <nav class="container nav">
+    <a class="brand" href="#home" aria-label="KIMPOOL">
+      <span class="brand-mark">K</span>KIMPOOL
+    </a>
+
+    <div class="links">
+      <a href="#home">الرئيسية</a>
+      <a href="#services">الخدمات</a>
+      <a href="#showcase">المنتجات</a>
+      <a href="#b2b">للمهنيين</a>
+      <a href="#contact">تواصل معنا</a>
+    </div>
+
+    <a class="wa-nav" href="#" onclick="openWhatsApp();return false">واتساب</a>
+    <button class="mobile-menu" aria-label="القائمة" onclick="scrollToServices()">☰</button>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">BILLIARD SOLUTIONS • MAROC</div>
+      <h1>كل ما تحتاجه<br><span>للبلياردو في المغرب</span></h1>
+      <p>
+        بيع، صيانة، إعادة تلبيد، كراء وإكسسوارات البلياردو،
+        بحلول موجهة للأفراد والمهنيين.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#" onclick="openWhatsApp();return false">
+          اطلب عرض سعر عبر واتساب
+        </a>
+        <a class="btn btn-outline" href="#services">اكتشف خدماتنا</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <div class="icon">◆</div>
+      <strong>طاولات بلياردو</strong>
+      <small>اختيارات حسب الاحتياج</small>
+    </div>
+    <div class="trust-item">
+      <div class="icon">✓</div>
+      <strong>الصيانة والتلبيد</strong>
+      <small>للحفاظ على جودة اللعب</small>
+    </div>
+    <div class="trust-item">
+      <div class="icon">⌖</div>
+      <strong>خدمة بالمغرب</strong>
+      <small>حسب المدينة والتوفر</small>
+    </div>
+    <div class="trust-item">
+      <div class="icon">＋</div>
+      <strong>حلول متكاملة</strong>
+      <small>كراء وإكسسوارات</small>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">NOS SERVICES</div>
+      <h2>حلول البلياردو في مكان واحد</h2>
+      <p>من اختيار الطاولة إلى الصيانة والتجهيزات، تواصل معنا حسب احتياجك.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-num">01 / TABLES</div>
+        <h3>بيع الطاولات</h3>
+        <p>طاولات بلياردو للأفراد والمشاريع، حسب المساحة والاحتياج.</p>
+      </article>
+      <article class="card">
+        <div class="card-num">02 / SERVICE</div>
+        <h3>الصيانة</h3>
+        <p>خدمة صيانة وإعادة تلبيد للمساعدة في الحفاظ على أداء الطاولة.</p>
+      </article>
+      <article class="card">
+        <div class="card-num">03 / RENTAL</div>
+        <h3>الكراء</h3>
+        <p>حلول كراء للمناسبات والمشاريع حسب الطلب والتوفر.</p>
+      </article>
+      <article class="card">
+        <div class="card-num">04 / ACCESSORIES</div>
+        <h3>الإكسسوارات</h3>
+        <p>مستلزمات وتجهيزات البلياردو لتكمل مشروعك.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="showcase" id="showcase">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">KIMPOOL EXPERIENCE</div>
+      <h2>البلياردو جزء من المكان</h2>
+      <p>تصميم بصري يركز على الطاولة والفضاء ويعطي إحساساً احترافياً للزائر.</p>
+    </div>
+
+    <div class="show-grid">
+      <div class="show-card">
+        <div class="show-copy">
+          <div class="tag">TABLES • DESIGN</div>
+          <h3>طاولة ترفع حضور المكان</h3>
+          <p>للمنازل، المقاهي، الفنادق وقاعات الألعاب.</p>
+        </div>
+      </div>
+      <div class="show-card small">
+        <div class="show-copy">
+          <div class="tag">SERVICE • CARE</div>
+          <h3>الحفاظ على جودة الطاولة</h3>
+          <p>الصيانة وإعادة التلبيد حسب الحاجة.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="b2b" id="b2b">
+  <div class="container b2b-grid">
+    <div>
+      <div class="kicker">B2B • PROFESSIONNELS</div>
+      <h2>حلول للمقاهي والفنادق وقاعات الألعاب</h2>
+      <p>
+        عندك مشروع وكتحتاج طاولة، كراء، صيانة أو إكسسوارات؟
+        أرسل لنا التفاصيل ونناقشو معك الاحتياج.
+      </p>
+      <a class="btn btn-primary" href="#" onclick="openWhatsApp('بغيت نناقش معاكم مشروع B2B ديالي.');return false">
+        ناقش مشروعك عبر واتساب
+      </a>
+    </div>
+
+    <div class="b2b-list">
+      <div class="b2b-item"><span>01</span>المقاهي</div>
+      <div class="b2b-item"><span>02</span>الفنادق</div>
+      <div class="b2b-item"><span>03</span>قاعات الألعاب</div>
+      <div class="b2b-item"><span>04</span>المشاريع والطلبات</div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">SIMPLE PROCESS</div>
+      <h2>كيف تبدأ مع KIMPOOL؟</h2>
+      <p>ثلاث خطوات بسيطة باش نوصلو للاحتياج ديالك.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-no">01</div>
+        <h3>تواصل معنا</h3>
+        <p>أرسل نوع الخدمة أو المشروع الذي تبحث عنه.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">02</div>
+        <h3>نحدد الاحتياج</h3>
+        <p>نراجع التفاصيل والمساحة والاستعمال حسب الحالة.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">03</div>
+        <h3>نبدأ التنفيذ</h3>
+        <p>نتابع معك الخطوة المناسبة حسب الخدمة المطلوبة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-wrap" id="contact">
+  <div class="container">
+    <div class="cta">
+      <div class="kicker">KIMPOOL • MAROC</div>
+      <h2>عندك مشروع أو كتقلب على طاولة؟</h2>
+      <p>تواصل معنا مباشرة عبر واتساب وأرسل لنا طلبك.</p>
+      <a class="btn btn-primary" href="#" onclick="openWhatsApp();return false">
+        اطلب عرض سعر الآن
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer">
+    <span>© KIMPOOL</span>
+    <span>حلول البلياردو في المغرب</span>
+    <span>واتساب: 07 12 60 58 06</span>
+  </div>
+</footer>
+
+<a class="float-wa" href="#" onclick="openWhatsApp();return false" aria-label="واتساب">◉</a>
+
+<script>
+const WHATSAPP_NUMBER = "212712605806";
+
+function openWhatsApp(customMessage){
+  const message = customMessage || "السلام عليكم، بغيت معلومات وعرض سعر من KIMPOOL.";
+  const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+  window.open(url,"_blank","noopener");
+}
+
+function scrollToServices(){
+  document.getElementById("services").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+  </html>
+                           
