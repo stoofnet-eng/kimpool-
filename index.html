@@ -3,453 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#06110f">
-<meta name="description" content="KIMPOOL — حلول البلياردو في المغرب: بيع الطاولات، الصيانة، إعادة التلبيد، الكراء والإكسسوارات.">
-<title>KIMPOOL | حلول البلياردو في المغرب</title>
-
+<title>KIMPOOL | بيع وصيانة طاولات البلياردو في المغرب</title>
+<meta name="description" content="KIMPOOL — بيع، صيانة، إعادة تلبيد وكراء طاولات البلياردو في المغرب. خدمة احترافية للمنازل والمقاهي والفنادق وقاعات الألعاب. عاينة مجانية، اتصل: 0712605806">
+<meta property="og:title" content="KIMPOOL | حلول البلياردو في المغرب">
+<meta property="og:description" content="بيع • صيانة • تلبيد • كراء — استفسار مجاني عبر واتساب">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"KIMPOOL",
+"description":"بيع وصيانة وكراء طاولات البلياردو في المغرب","areaServed":"المغرب",
+"telephone":"+212712605806","priceRange":"درهم"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#06110f;
-  --bg2:#0a1916;
-  --teal:#10cbb9;
-  --teal2:#0a8f83;
-  --white:#fff;
-  --text:#edf7f4;
-  --muted:#a9bbb6;
-  --dark:#07100e;
-  --card:#0c1d19;
-  --line:rgba(255,255,255,.11);
-  --shadow:0 25px 70px rgba(0,0,0,.35);
-  --radius:22px;
+  --green:#0e7a3d; --green-d:#0a5c2e; --gold:#c9a227; --dark:#0d1117;
+  --bg:#f7f7f4; --card:#fff; --text:#1c1f23; --muted:#5d646d; --radius:16px;
 }
-*{box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;
-  background:#f6f9f8;color:#10201d;line-height:1.7;
-}
+body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
 a{text-decoration:none;color:inherit}
-button{font:inherit}
-.container{width:min(1180px,92%);margin:auto}
+img{width:100%;height:100%;object-fit:cover;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:70px 0}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#fff;font-weight:800;
+  padding:14px 30px;border-radius:50px;font-size:17px;transition:.25s;box-shadow:0 6px 18px rgba(14,122,61,.35)}
+.btn:hover{background:var(--green-d);transform:translateY(-2px)}
+.btn.ghost{background:#fff;color:var(--green);border:2px solid var(--green);box-shadow:none}
+.btn.ghost:hover{background:var(--green);color:#fff}
+.tag{display:inline-block;background:rgba(201,162,39,.15);color:var(--gold);font-weight:700;
+  padding:6px 18px;border-radius:50px;font-size:14px;margin-bottom:14px}
+h2{font-size:32px;font-weight:900;margin-bottom:10px}
+.sub{color:var(--muted);max-width:620px;margin:0 auto 44px;font-size:17px}
+.center{text-align:center}
 
-/* NAV */
-.navbar{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(4,12,10,.78);
-  border-bottom:1px solid var(--line);
-  backdrop-filter:blur(14px);
-}
-.nav{
-  min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;
-}
-.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:950;letter-spacing:2px;font-size:25px}
-.brand-mark{
-  width:38px;height:38px;border:2px solid var(--teal);
-  color:var(--teal);display:grid;place-items:center;
-  font-size:24px;font-weight:950;transform:skew(-10deg);
-}
-.links{display:flex;gap:26px;color:#e9f2ef;font-size:14px;font-weight:750}
-.links a{transition:.2s}
-.links a:hover{color:var(--teal)}
-.wa-nav{
-  background:var(--teal);color:#001411;border-radius:999px;
-  padding:10px 18px;font-weight:900;font-size:13px;white-space:nowrap;
-}
+.topbar{background:var(--dark);color:#e8e8e8;font-size:14px;padding:9px 0}
+.topbar .container{display:flex;justify-content:center;gap:26px;flex-wrap:wrap}
+.topbar b{color:var(--gold)}
 
-/* HERO */
-.hero{
-  min-height:760px;position:relative;display:flex;align-items:center;
-  overflow:hidden;background:var(--bg);color:#fff;padding-top:72px;
-}
-.hero-bg{
-  position:absolute;inset:0;z-index:0;
-  background:
-    linear-gradient(90deg,rgba(3,10,9,.97) 0%,rgba(3,10,9,.78) 38%,rgba(3,10,9,.28) 75%,rgba(3,10,9,.55) 100%),
-    url("https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=78&w=1800");
-  background-size:cover;background-position:center;
-}
-.hero::after{
-  content:"";position:absolute;left:0;right:0;bottom:0;height:170px;
-  background:linear-gradient(transparent,var(--bg));z-index:1;
-}
-.hero-content{position:relative;z-index:2;padding:70px 0 100px;max-width:650px}
-.eyebrow{
-  color:var(--teal);font-size:12px;font-weight:950;
-  letter-spacing:4px;margin-bottom:15px;
-}
-.hero h1{
-  margin:0 0 20px;font-size:clamp(43px,6.3vw,78px);
-  line-height:1.06;font-weight:950;letter-spacing:-1px;
-}
-.hero h1 span{color:var(--teal)}
-.hero p{max-width:600px;color:#e0ebe8;font-size:18px;margin:0 0 28px}
-.actions{display:flex;flex-wrap:wrap;gap:12px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  min-height:48px;padding:12px 22px;border-radius:999px;
-  font-weight:900;border:1px solid transparent;cursor:pointer;
-}
-.btn-primary{background:var(--teal);color:#001411}
-.btn-primary:hover{filter:brightness(1.08)}
-.btn-outline{border-color:rgba(255,255,255,.38);color:#fff}
-.btn-outline:hover{border-color:var(--teal);color:var(--teal)}
+header{background:rgba(13,17,23,.92);backdrop-filter:blur(10px);position:sticky;top:0;z-index:50;
+  box-shadow:0 2px 14px rgba(0,0,0,.25)}
+header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{font-size:26px;font-weight:900;letter-spacing:1px;color:#fff}
+.logo i{color:var(--gold);font-style:normal}
+.logo small{display:block;font-size:11px;color:#9aa39b;font-weight:600;letter-spacing:2px}
+nav a{margin:0 13px;font-weight:700;font-size:15px;color:#c9d2c9}
+nav a:hover{color:var(--gold)}
+header .btn{padding:10px 22px;font-size:15px}
+header .tel-h{color:#fff;font-weight:800;font-size:16px;margin-left:14px;direction:ltr;display:inline-block}
 
-/* TRUST */
-.trust{background:var(--bg);color:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.trust-item{text-align:center;padding:25px 12px;border-left:1px solid var(--line)}
-.trust-item:last-child{border-left:0}
-.icon{color:var(--teal);font-size:25px;font-weight:950}
-.trust-item strong{display:block;font-size:15px;margin-top:3px}
-.trust-item small{color:var(--muted);font-size:12px}
+.hero{position:relative;color:#fff;padding:0;min-height:640px;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to left,rgba(8,12,9,.96) 30%,rgba(8,12,9,.75) 60%,rgba(8,12,9,.45))}
+.hero .container{position:relative;z-index:1;padding:90px 20px}
+.hero h1{font-size:44px;font-weight:900;line-height:1.35;margin:12px 0 18px;max-width:600px}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p{color:#c9d2c9;font-size:18px;max-width:520px;margin-bottom:28px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.trust-row{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap}
+.trust-row div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  padding:12px 18px;border-radius:12px;font-size:14px}
+.trust-row b{display:block;font-size:19px;color:var(--gold)}
 
-/* SECTIONS */
-section{padding:90px 0}
-.section-head{text-align:center;max-width:720px;margin:0 auto 45px}
-.kicker{color:var(--teal2);font-size:11px;font-weight:950;letter-spacing:3px}
-.section-head h2{font-size:clamp(32px,4vw,48px);line-height:1.15;margin:8px 0 12px}
-.section-head p{color:#667873;margin:0}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:var(--card);border-radius:var(--radius);padding:30px 24px;box-shadow:0 4px 20px rgba(0,0,0,.05);
+  transition:.25s;border:1px solid #eee}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 34px rgba(0,0,0,.1)}
+.card .ic{width:56px;height:56px;border-radius:14px;background:rgba(14,122,61,.1);display:flex;
+  align-items:center;justify-content:center;font-size:27px;margin-bottom:16px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.card a{color:var(--green);font-weight:800;font-size:15px;display:inline-block;margin-top:12px}
 
-/* SERVICES */
-.services{background:#f7faf9}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
-.card{
-  background:#fff;border:1px solid #e1eae6;border-radius:var(--radius);
-  padding:28px;box-shadow:0 12px 40px rgba(7,17,15,.06);
-  transition:.25s;
-}
-.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.card-num{color:var(--teal2);font-size:12px;font-weight:950}
-.card h3{font-size:21px;margin:12px 0 7px}
-.card p{font-size:14px;color:#65736f;margin:0}
+.prices{background:#fff}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.price{background:var(--bg);border-radius:var(--radius);padding:34px 28px;border:2px solid transparent;position:relative}
+.price.pop{border-color:var(--green);background:linear-gradient(180deg,#f2faf5,var(--bg))}
+.badge{position:absolute;top:-14px;right:24px;background:var(--gold);color:#fff;font-weight:800;
+  font-size:13px;padding:4px 16px;border-radius:50px}
+.price h3{font-size:20px;margin-bottom:6px}
+.price .from{color:var(--muted);font-size:14px}
+.price .num{font-size:34px;font-weight:900;color:var(--green);margin:6px 0 14px}
+.price ul{list-style:none;margin-bottom:22px}
+.price li{padding:6px 0;font-size:15px;color:#333}
+.price li::before{content:"✓";color:var(--green);font-weight:900;margin-left:8px}
+.note{text-align:center;color:var(--muted);font-size:14px;margin-top:26px}
 
-/* SHOWCASE */
-.showcase{background:#fff}
-.show-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-.show-card{
-  min-height:360px;border-radius:24px;overflow:hidden;position:relative;
-  background:
-    linear-gradient(180deg,transparent 30%,rgba(0,0,0,.82)),
-    url("https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=70&w=1200");
-  background-size:cover;background-position:center;box-shadow:var(--shadow);
-}
-.show-card.small{min-height:360px;background-position:55% center}
-.show-copy{position:absolute;bottom:0;right:0;left:0;padding:28px;color:#fff}
-.show-copy .tag{color:var(--teal);font-weight:950;font-size:11px;letter-spacing:2px}
-.show-copy h3{font-size:28px;line-height:1.2;margin:6px 0}
-.show-copy p{color:#d4dfdc;margin:0;font-size:14px}
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ba{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.ba .img{height:220px}
+.ba .lbl{padding:16px 20px}
+.ba .lbl b{display:block}
+.ba .lbl span{color:var(--muted);font-size:14px}
 
-/* B2B */
-.b2b{background:var(--bg);color:#fff}
-.b2b-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
-.b2b h2{font-size:clamp(32px,4vw,50px);line-height:1.15;margin:10px 0 15px}
-.b2b p{color:var(--muted)}
-.b2b-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.b2b-item{
-  padding:18px;border:1px solid var(--line);border-radius:17px;
-  background:rgba(255,255,255,.035);font-weight:800;
-}
-.b2b-item span{display:block;color:var(--teal);font-size:20px;margin-bottom:5px}
+.testi{background:var(--dark);color:#fff}
+.testi .sub{color:#aeb8ae}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.t{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:28px}
+.t .stars{color:var(--gold);font-size:18px;letter-spacing:3px;margin-bottom:12px}
+.t p{color:#d5dcd5;font-size:15px;margin-bottom:16px}
+.t b{color:#fff} .t small{display:block;color:#8fae95;font-size:13px}
 
-/* PROCESS */
-.process{background:#f7faf9}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.step{background:#fff;border:1px solid #e1eae6;border-radius:20px;padding:25px}
-.step-no{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#dff7f3;color:#08786f;font-weight:950}
-.step h3{margin:14px 0 5px}
-.step p{margin:0;color:#65736f;font-size:14px}
+.b2b .container{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.b2b ul{list-style:none;margin:20px 0 30px}
+.b2b li{padding:10px 0;font-size:17px;font-weight:600}
+.b2b li::before{content:"◆";color:var(--gold);margin-left:12px}
+.b2b-img{border-radius:var(--radius);overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.3);height:400px}
 
-/* CTA */
-.cta-wrap{padding:70px 0}
-.cta{
-  border-radius:28px;padding:52px;
-  background:linear-gradient(135deg,#0a3731,#06110f);
-  color:#fff;box-shadow:var(--shadow);
-}
-.cta h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:8px 0}
-.cta p{color:var(--muted);max-width:650px}
+.steps{background:#fff}
+.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.step{text-align:center;padding:30px 20px}
+.step .n{width:64px;height:64px;border-radius:50%;background:var(--green);color:#fff;font-size:26px;
+  font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.step h3{font-size:19px;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15px}
 
-/* FOOTER */
-footer{background:#030807;color:#91a39f;padding:30px 0;font-size:13px}
-.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.faq{max-width:760px;margin:0 auto}
+details{background:#fff;border-radius:12px;margin-bottom:12px;box-shadow:0 3px 14px rgba(0,0,0,.05);overflow:hidden}
+summary{padding:18px 22px;font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::after{content:"+";color:var(--green);font-size:24px;font-weight:900}
+details[open] summary::after{content:"−"}
+details p{padding:0 22px 20px;color:var(--muted);font-size:15px}
 
-/* FLOATING WHATSAPP */
-.float-wa{
-  position:fixed;left:18px;bottom:18px;z-index:120;
-  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
-  background:var(--teal);color:#001411;font-size:24px;font-weight:950;
-  box-shadow:0 15px 40px rgba(0,0,0,.3);
-}
+.final{background:linear-gradient(135deg,var(--green),var(--green-d));color:#fff;text-align:center}
+.final h2{font-size:34px;margin-bottom:12px}
+.final p{color:#d9ecdf;margin-bottom:30px;font-size:18px}
+.final .btn{background:#fff;color:var(--green);font-size:19px;padding:17px 44px}
+.final .tel{display:block;margin-top:18px;color:#fff;font-weight:800;font-size:20px;direction:ltr}
 
-/* MOBILE */
-.mobile-menu{display:none}
+footer{background:var(--dark);color:#9aa39b;padding:34px 0;font-size:14px;text-align:center}
+footer b{color:#fff}
+
+.wa-float{position:fixed;bottom:22px;left:22px;width:60px;height:60px;background:#25d366;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.3);z-index:99;transition:.25s}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+
 @media(max-width:900px){
-  .links{display:none}
-  .mobile-menu{display:block;background:none;border:0;color:#fff;font-size:25px}
-  .hero{min-height:700px}
-  .hero-bg{
-    background:
-      linear-gradient(180deg,rgba(3,10,9,.38),rgba(3,10,9,.68) 48%,rgba(3,10,9,.98) 100%),
-      url("https://images.unsplash.com/photo-1704040686294-9c1878cf5c7d?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=76&w=1400");
-    background-position:center;
-  }
-  .hero-content{padding:60px 0 70px;max-width:700px}
-  .trust-grid{grid-template-columns:repeat(2,1fr)}
-  .trust-item:nth-child(2){border-left:0}
-  .cards{grid-template-columns:repeat(2,1fr)}
-  .show-grid,.b2b-grid{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr}
+  .hero .container,.b2b .container{grid-template-columns:1fr}
+  .grid4,.price-grid,.ba-grid,.t-grid,.step-grid{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:30px}
+  nav,.tel-h{display:none}
+  header .container{justify-content:center;gap:14px}
 }
-@media(max-width:560px){
-  .container{width:min(94%,520px)}
-  .nav{min-height:64px}
-  .brand{font-size:20px}
-  .brand-mark{width:31px;height:31px;font-size:20px}
-  .wa-nav{padding:9px 12px;font-size:11px}
-  .hero{min-height:720px;padding-top:64px}
-  .hero-content{padding:50px 0 60px}
-  .hero h1{font-size:43px}
-  .hero p{font-size:15px}
-  .actions{display:grid}
-  .actions .btn{width:100%}
-  .trust-item{padding:18px 7px}
-  .trust-item strong{font-size:12px}
-  .trust-item small{font-size:10px}
-  section{padding:62px 0}
-  .cards{grid-template-columns:1fr}
-  .show-card,.show-card.small{min-height:300px}
-  .b2b-list{grid-template-columns:1fr}
-  .cta{padding:30px 22px;border-radius:21px}
-  .float-wa{width:54px;height:54px;left:14px;bottom:14px}
-}
-
-/* ACCESSIBLE REDUCED MOTION */
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .card{transition:none}
-}
+@media(max-width:600px){.grid4,.price-grid,.ba-grid,.t-grid,.step-grid{grid-template-columns:1fr}}
 </style>
+<base target="_blank">
 </head>
-
 <body>
 
-<header class="navbar">
-  <nav class="container nav">
-    <a class="brand" href="#home" aria-label="KIMPOOL">
-      <span class="brand-mark">K</span>KIMPOOL
-    </a>
+<div class="topbar">
+  <div class="container">
+    <span>🚚 <b>خدمة متوفرة فجميع المدن المغربية</b></span>
+    <span>🛡️ <b>ضمان على الطاولات والتركيب</b></span>
+    <span>⭐ <b>+50 طاولة مركّبة ومهيّأة</b></span>
+  </div>
+</div>
 
-    <div class="links">
-      <a href="#home">الرئيسية</a>
+<header>
+  <div class="container">
+    <div class="logo">KIM<i>POOL</i><small>BILLIARD • MAROC</small></div>
+    <nav>
       <a href="#services">الخدمات</a>
-      <a href="#showcase">المنتجات</a>
-      <a href="#b2b">للمهنيين</a>
-      <a href="#contact">تواصل معنا</a>
+      <a href="#prices">الأسعار</a>
+      <a href="#work">أعمالنا</a>
+      <a href="#faq">الأسئلة</a>
+    </nav>
+    <div>
+      <a class="tel-h" href="tel:0712605806">📞 0712605806</a>
+      <a class="btn" href="https://wa.me/212712605806?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A8%D9%84%D9%8A%D8%A7%D8%B1%D8%AF%D9%88" target="_blank">💬 استفسار مجاني</a>
     </div>
-
-    <a class="wa-nav" href="#" onclick="openWhatsApp();return false">واتساب</a>
-    <button class="mobile-menu" aria-label="القائمة" onclick="scrollToServices()">☰</button>
-  </nav>
+  </div>
 </header>
 
-<main>
-
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="container">
-    <div class="hero-content">
-      <div class="eyebrow">BILLIARD SOLUTIONS • MAROC</div>
-      <h1>كل ما تحتاجه<br><span>للبلياردو في المغرب</span></h1>
-      <p>
-        بيع، صيانة، إعادة تلبيد، كراء وإكسسوارات البلياردو،
-        بحلول موجهة للأفراد والمهنيين.
-      </p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#" onclick="openWhatsApp();return false">
-          اطلب عرض سعر عبر واتساب
-        </a>
-        <a class="btn btn-outline" href="#services">اكتشف خدماتنا</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="trust">
-  <div class="container trust-grid">
-    <div class="trust-item">
-      <div class="icon">◆</div>
-      <strong>طاولات بلياردو</strong>
-      <small>اختيارات حسب الاحتياج</small>
-    </div>
-    <div class="trust-item">
-      <div class="icon">✓</div>
-      <strong>الصيانة والتلبيد</strong>
-      <small>للحفاظ على جودة اللعب</small>
-    </div>
-    <div class="trust-item">
-      <div class="icon">⌖</div>
-      <strong>خدمة بالمغرب</strong>
-      <small>حسب المدينة والتوفر</small>
-    </div>
-    <div class="trust-item">
-      <div class="icon">＋</div>
-      <strong>حلول متكاملة</strong>
-      <small>كراء وإكسسوارات</small>
-    </div>
-  </div>
-</section>
-
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">NOS SERVICES</div>
-      <h2>حلول البلياردو في مكان واحد</h2>
-      <p>من اختيار الطاولة إلى الصيانة والتجهيزات، تواصل معنا حسب احتياجك.</p>
-    </div>
-
-    <div class="cards">
-      <article class="card">
-        <div class="card-num">01 / TABLES</div>
-        <h3>بيع الطاولات</h3>
-        <p>طاولات بلياردو للأفراد والمشاريع، حسب المساحة والاحتياج.</p>
-      </article>
-      <article class="card">
-        <div class="card-num">02 / SERVICE</div>
-        <h3>الصيانة</h3>
-        <p>خدمة صيانة وإعادة تلبيد للمساعدة في الحفاظ على أداء الطاولة.</p>
-      </article>
-      <article class="card">
-        <div class="card-num">03 / RENTAL</div>
-        <h3>الكراء</h3>
-        <p>حلول كراء للمناسبات والمشاريع حسب الطلب والتوفر.</p>
-      </article>
-      <article class="card">
-        <div class="card-num">04 / ACCESSORIES</div>
-        <h3>الإكسسوارات</h3>
-        <p>مستلزمات وتجهيزات البلياردو لتكمل مشروعك.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="showcase" id="showcase">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">KIMPOOL EXPERIENCE</div>
-      <h2>البلياردو جزء من المكان</h2>
-      <p>تصميم بصري يركز على الطاولة والفضاء ويعطي إحساساً احترافياً للزائر.</p>
-    </div>
-
-    <div class="show-grid">
-      <div class="show-card">
-        <div class="show-copy">
-          <div class="tag">TABLES • DESIGN</div>
-          <h3>طاولة ترفع حضور المكان</h3>
-          <p>للمنازل، المقاهي، الفنادق وقاعات الألعاب.</p>
-        </div>
-      </div>
-      <div class="show-card small">
-        <div class="show-copy">
-          <div class="tag">SERVICE • CARE</div>
-          <h3>الحفاظ على جودة الطاولة</h3>
-          <p>الصيانة وإعادة التلبيد حسب الحاجة.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="b2b" id="b2b">
-  <div class="container b2b-grid">
-    <div>
-      <div class="kicker">B2B • PROFESSIONNELS</div>
-      <h2>حلول للمقاهي والفنادق وقاعات الألعاب</h2>
-      <p>
-        عندك مشروع وكتحتاج طاولة، كراء، صيانة أو إكسسوارات؟
-        أرسل لنا التفاصيل ونناقشو معك الاحتياج.
-      </p>
-      <a class="btn btn-primary" href="#" onclick="openWhatsApp('بغيت نناقش معاكم مشروع B2B ديالي.');return false">
-        ناقش مشروعك عبر واتساب
-      </a>
-    </div>
-
-    <div class="b2b-list">
-      <div class="b2b-item"><span>01</span>المقاهي</div>
-      <div class="b2b-item"><span>02</span>الفنادق</div>
-      <div class="b2b-item"><span>03</span>قاعات الألعاب</div>
-      <div class="b2b-item"><span>04</span>المشاريع والطلبات</div>
-    </div>
-  </div>
-</section>
-
-<section class="process">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">SIMPLE PROCESS</div>
-      <h2>كيف تبدأ مع KIMPOOL؟</h2>
-      <p>ثلاث خطوات بسيطة باش نوصلو للاحتياج ديالك.</p>
-    </div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-no">01</div>
-        <h3>تواصل معنا</h3>
-        <p>أرسل نوع الخدمة أو المشروع الذي تبحث عنه.</p>
-      </div>
-      <div class="step">
-        <div class="step-no">02</div>
-        <h3>نحدد الاحتياج</h3>
-        <p>نراجع التفاصيل والمساحة والاستعمال حسب الحالة.</p>
-      </div>
-      <div class="step">
-        <div class="step-no">03</div>
-        <h3>نبدأ التنفيذ</h3>
-        <p>نتابع معك الخطوة المناسبة حسب الخدمة المطلوبة.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-wrap" id="contact">
-  <div class="container">
-    <div class="cta">
-      <div class="kicker">KIMPOOL • MAROC</div>
-      <h2>عندك مشروع أو كتقلب على طاولة؟</h2>
-      <p>تواصل معنا مباشرة عبر واتساب وأرسل لنا طلبك.</p>
-      <a class="btn btn-primary" href="#" onclick="openWhatsApp();return false">
-        اطلب عرض سعر الآن
-      </a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container footer">
-    <span>© KIMPOOL</span>
-    <span>حلول البلياردو في المغرب</span>
-    <span>واتساب: 07 12 60 58 06</span>
-  </div>
-</footer>
-
-<a class="float-wa" href="#" onclick="openWhatsApp();return false" aria-label="واتساب">◉</a>
-
-<script>
-const WHATSAPP_NUMBER = "212712605806";
-
-function openWhatsApp(customMessage){
-  const message = customMessage || "السلام عليكم، بغيت معلومات وعرض سعر من KIMPOOL.";
-  const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
-  window.open(url,"_blank","noopener");
-}
-
-function scrollToServices(){
-  document.getElementById("services").scrollIntoView({behavior:"smooth"});
-}
-</script>
-
-</body>
-  </html>
-                           
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="data:image/jpeg;base64,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
